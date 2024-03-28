@@ -27,6 +27,7 @@ nav {
     padding: 30px;
 }
 
+/* input box */
 .container {
     height: 100%;
     display: flex;
@@ -72,6 +73,7 @@ button {
     color: white;
 }
 
+/* theme switcher */
 .switch {
     position: relative;
     display: inline-block;
@@ -123,7 +125,6 @@ input:checked+.slider:before {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -132,6 +133,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+/* footer styling */
 footer {
     background-color: #f0ead6;
     text-align: center;
@@ -144,4 +146,30 @@ footer h2 {
 
 main {
     height: 100%;
+}
+
+/* dark mode */
+
+.dark {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.dark nav {
+    background-color: #9e9062;
+}
+
+.dark footer {
+    background-color: #9e9062;
+}
+
+
+.dark .input-container {
+    background-color: #9e9062;
+}
+
+/* light mode */
+.light {
+    background-color: white;
+    color: black;
 }

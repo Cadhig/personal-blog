@@ -120,3 +120,30 @@ footer h2 {
 .post h2 {
     text-decoration: underline;
 }
+
+
+
+/* dark mode */
+
+.dark {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.dark nav {
+    background-color: #9e9062;
+}
+
+.dark footer {
+    background-color: #9e9062;
+}
+
+.dark .post {
+    background-color: #9e9062;
+}
+
+/* light mode */
+.light {
+    background-color: white;
+    color: black;
+}

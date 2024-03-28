@@ -8,13 +8,12 @@ body.textContent = 'body!!!!!!!!!!!!';
 const author = document.createElement('p')
 author.textContent = 'Posted by: Cadence';
 
-postsEl.appendChild(title);
-postsEl.appendChild(body);
-postsEl.appendChild(author);
-postsContainer.appendChild(postsEl)
+const backButton = document.getElementById('back')
 
 
 
+
+// post box
 console.log(postsEl)
 const post = {
     title: 'Post Title',
@@ -43,3 +42,22 @@ for (let i = 0; i < posts.length; i++) {
     postsContainer.appendChild(postsEl)
 
 }
+
+// theme switcher
+const container = document.querySelector('.container')
+const themeSwitch = document.querySelector('.theme')
+
+let mode = 'light';
+
+function switchTheme() {
+    if (mode === 'light') {
+        mode = 'dark';
+        container.setAttribute('class', 'dark');
+    }
+    else {
+        mode = 'light';
+        container.setAttribute('class', 'light');
+    }
+}
+
+themeSwitch.addEventListener('click', switchTheme);
