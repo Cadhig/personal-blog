@@ -28,7 +28,7 @@ for (let i = 0; i < posts.length; i++) {
     const body = document.createElement('p')
     body.textContent = currentPost.body
     const username = document.createElement('p')
-    username.textContent = currentPost.username;
+    username.textContent = 'posted by: ' + currentPost.username;
 
     postsEl.appendChild(title);
     postsEl.appendChild(body);
