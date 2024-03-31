@@ -50,7 +50,7 @@ submitButton.addEventListener('click', function (event) {
 
     const stringifiedPost = JSON.stringify(postStorage)
     localStorage.setItem('posts', stringifiedPost)
-    window.location.href = '/posts/index.html'
+    window.location.href = 'posts/index.html'
 
 });
 
