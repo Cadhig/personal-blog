@@ -6,7 +6,7 @@ const submitButton = document.querySelector('#submit')
 const msgContainer = document.querySelector('#msg')
 
 submitButton.addEventListener('click', function (event) {
-
+    event.preventDefault()
     const username = usernameInput.value;
     const title = titleInput.value;
     const body = textBody.value;
@@ -38,21 +38,19 @@ submitButton.addEventListener('click', function (event) {
         body: body,
     }
 
-    let postStorage
+    let postStorage = []
 
     if (localStorage.getItem('posts') !== null) {
 
         postStorage = JSON.parse(localStorage.getItem('posts'))
     }
-    else {
-        postStorage = []
-    }
+
 
     postStorage.push(post)
 
     const stringifiedPost = JSON.stringify(postStorage)
     localStorage.setItem('posts', stringifiedPost)
-    window.location.href = 'posts/index.html'
+    window.location.href = '/posts/index.html'
 
 });
 

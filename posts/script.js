@@ -14,7 +14,9 @@ console.log(postsEl)
 
 let posts = []
 
-posts = JSON.parse(localStorage.getItem('posts'))
+if (localStorage.getItem('posts') !== null) {
+    posts = JSON.parse(localStorage.getItem('posts'))
+}
 
 for (let i = 0; i < posts.length; i++) {
     const currentPost = posts[i]
@@ -44,11 +46,11 @@ let mode = 'light';
 function switchTheme() {
     if (mode === 'light') {
         mode = 'dark';
-        container.setAttribute('class', 'dark');
+        container.setAttribute('class', mode);
     }
     else {
         mode = 'light';
-        container.setAttribute('class', 'light');
+        container.setAttribute('class', mode);
     }
 }
 
